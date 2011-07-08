@@ -1,0 +1,10 @@
+import sys
+import getopt
+
+def main():
+    //Read the training file
+    //
+
+
+if __name__ == "__main__":
+    main()
