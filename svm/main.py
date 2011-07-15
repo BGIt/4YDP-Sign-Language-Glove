@@ -1,20 +1,31 @@
 import sys
 import getopt
-from svm import *
+from pythonlibsvm import svmutil
 
 """
 There are 2 flags for this,
 -t - Creates/updates a new model and returns it into the file name that was specified as the second argument.
 -m - Matches test data to the model
+-name - name of the model
+-file - the data file that is being ported
 """
 def main():
     #Read the options
-    opts, args = getopt.getopt(sys.argv[1:], "t:m:h", ["help"])
+    opts, args = getopt.getopt(sys.argv[1:], "tmn:f:")
+    import pdb; pdb.set_trace()
     for o in opts:
-        if o == "-t":
-            train(args[0], args[1]);
-        elif o == "-m":
-            match(args[0]);
+        if o[0] == "-t":
+            action = "t"
+        elif o[0] == "-m":
+            action = "m"
+        elif o[0] == "-n":
+            name = o[1]
+        elif o[0] == "-f":
+            filedata = o[1]
+    if action == "t":
+        train(name, filedata)
+    elif action == "m":
+        match(filedata)
     return 0
 
 def train(model_name, svmdata):
