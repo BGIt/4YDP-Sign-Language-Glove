@@ -72,6 +72,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    '/Users/brian/Documents/School/4B/4YDP/4YDP-Sign-Language-Glove/signlang/static/',
 )
 
 # List of finder classes that know how to find static files in
@@ -104,7 +105,7 @@ ROOT_URLCONF = 'signlang.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    '/Users/brian/Documents/School/4B/4YDP/4YDP-Sign-Language-Glove/signlang/templates'
+    '/Users/brian/Documents/School/4B/4YDP/4YDP-Sign-Language-Glove/signlang/templates',
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )

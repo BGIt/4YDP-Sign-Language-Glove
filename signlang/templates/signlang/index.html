@@ -1,8 +1,9 @@
 <html>
     <head>
         <title>Sign Language Glove</title>
-        <script type="text/javascript" src="/media/web/jquery.js"></script>
-        <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}/static/web/push.js"></script>
+        <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css" />
     </head>
     <body>
         <div class="container">
@@ -13,9 +14,16 @@
                 <div class="row">
                     <div class="span10">
                         <h2>Current Translation</h2>
-                </div>
+                        <div id="currentImg">
+                            <img id="currentImgTag"></img>
+                        </div>
+                    </div>
                     <div class="span4">
-                        <h3>Recent Translation</h3>
+                        <h3>Recent Translation (Oldest to Recent)</h3>
+                        <div id="recentTranslation">
+                            <ul id="recentTransList">
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

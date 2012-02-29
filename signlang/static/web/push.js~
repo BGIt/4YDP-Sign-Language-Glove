@@ -1,0 +1,16 @@
+$(document).ready(function() {
+    getWord("");
+})
+
+function getWord(prevLetter) {
+    $.ajax({url:"/signlang", timeout: 10000000,
+            dataType:'json', success: function(data) {
+                //Push to html
+                $("#currentImg").html("<img>"+"</img>");
+                if (prevLetter !== "") {
+                    $("ul#recentTransList").append("<li>"+data+"</li>");
+                }
+                getWord(data);
+            }
+    });
+}
